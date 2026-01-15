@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Remove specific elements in NTU cool
-// @author       You
+// @author       D101028
 // @match        https://cool.ntu.edu.tw/*
 // @grant        none
 // @run-at       document-end

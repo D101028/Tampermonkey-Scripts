@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Replaces play link with product link for #btBack > a
-// @author       Me
+// @author       D101028
 // @match        https://hamivideo.hinet.net/*
 // @grant        none
 // @run-at       document-end

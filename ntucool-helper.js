@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove 日文能力測驗 for ntu cool
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Remove specific elements in NTU cool
 // @author       D101028
 // @match        https://cool.ntu.edu.tw/*

@@ -36,18 +36,27 @@
         }
     };
 
-    // Function to click "X" of the slow img
+    // Function to remove the slow div
     const slowDivRemover = () => {
-        const slowDiv = document.getElementById("#slow"); 
+        const slowDiv = document.getElementById("slow"); 
         if (!slowDiv || !slowDiv.style) return ;
         if (slowDiv.style.display !== "none") {
             slowDiv.style.display = "none"; 
         }
     };
 
+    // Function to click and play video
+    const clickAndPlay = () => {
+        const cover = document.querySelector("#player > div"); 
+        if (!cover) return; 
+        if (cover.innerHTML.includes("秒後自動播放")) 
+            cover.click(); 
+    }
+
     // Run immediately
     transformLink();
     setInterval(slowDivRemover, 500);
+    setInterval(clickAndPlay, 500);
 
     // Optional: Use an Observer if the content loads dynamically (AJAX)
     const observer = new MutationObserver(transformLink);

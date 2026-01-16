@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         HamiVideo Link Transformer
+// @name         HamiVideo Helper
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Replaces play link with product link for #btBack > a
 // @author       D101028
 // @match        https://hamivideo.hinet.net/*
@@ -36,8 +36,18 @@
         }
     };
 
+    // Function to click "X" of the slow img
+    const slowDivRemover = () => {
+        const slowDiv = document.getElementById("#slow"); 
+        if (!slowDiv || !slowDiv.style) return ;
+        if (slowDiv.style.display !== "none") {
+            slowDiv.style.display = "none"; 
+        }
+    };
+
     // Run immediately
     transformLink();
+    setInterval(slowDivRemover, 500);
 
     // Optional: Use an Observer if the content loads dynamically (AJAX)
     const observer = new MutationObserver(transformLink);

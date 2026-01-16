@@ -53,6 +53,18 @@
             cover.click(); 
     }
 
+    document.addEventListener("keydown", (event) => {
+        // Fast forward 1:25 (85 seconds) when pressing Ctrl + ArrowRight
+        if (event.ctrlKey && event.key === 'ArrowRight') {
+            const video = document.querySelector('#h5video');
+            if (video) video.currentTime += 85;
+        }
+        if (event.ctrlKey && event.key === 'ArrowLeft') {
+            const video = document.querySelector('#h5video');
+            if (video) video.currentTime -= 85;
+        }
+    })
+
     // Run immediately
     transformLink();
     setInterval(slowDivRemover, 500);

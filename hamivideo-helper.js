@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HamiVideo Helper
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Replaces play link with product link for #btBack > a
 // @author       D101028
 // @match        https://hamivideo.hinet.net/*
